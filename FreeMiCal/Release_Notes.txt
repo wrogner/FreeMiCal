@@ -1,0 +1,104 @@
+0.2.0.0
+=======
+20070402 war
+
+OK, thanks to Robert John I found a solution to accessing both Outlook 2003 and 2007.
+By referencing a local copy of the 2003 COM-Wrapper both OL 2003 and 2007 can be 
+accessed due to backward compatibility of OL 2007.
+This justifies the version increase from 0.1 to 0.2
+
+Changes:
+1. Added local copy of Microsoft.Office.Interop.Outlook.dll and referenced it.
+
+
+0.1.0.12
+========
+20070321 war
+
+Changes:
+1. Added a parameter to fMiCal.exe to accept profile names
+2. Constructor of OLCalReader uses "Outlook" as default profile name. Accepts profile name override
+3. Changed Calendar folder to Outlook profile and forward profile name as parameter to fMiCal.exe
+4. Added error signaling to fMiCal.run. FreeMiCal interpretes a -1 as an error from fMiCal.
+
+
+0.1.0.11
+========
+20070321 war
+
+Internal version, not released on Sourceforge
+
+Changes:
+1. monitoring of fMiCal.run and update of the progress bar is done in a background worker process.
+2. Export can be cancelled now, terminating the export process fMiCal.exe and the background worker process.
+3. A feedback area above the progress bar provides error and status messages.
+4. Lock situation is catched. FreeMiCal reacts generously to locked fMiCal.run.
+
+
+0.1.0.10
+========
+20070316 war
+
+Changes:
+1. The graphical front end now provides visual feedback with a progress bar
+2. In order to update this, fMiCal writes a file fMiCal.run. 
+   FreeMiCal reads this file and updates the progress bar accordingly.
+3. The Button Free them... will change to Liberte... (I did not implement Cancel yet)
+
+Known issues:
+1. A deadlock situation may occur when fMiCal writes the file when FreeMiCal tries to read. 
+   I have tried to catch this, but there are situations where it still might arise.
+
+
+0.1.0.9
+=======
+20070315 war
+
+Internal version, not released on Sourceforge
+
+Changes:
+1. fMiCal.exe writes a sync file named fMiCal.run
+
+
+0.1.0.8
+=======
+20070315 war
+
+Changes:
+1. Fixed shifted appointment times with daylight saving time
+
+
+0.1.0.7
+=======
+20070311 war
+
+Changes:
+1. Fixed error in processing Sunday appointments
+2. Added prototype graphical frontend FreeMiCal
+
+0.1.0.6
+=======
+20070309 war
+
+First release on SourceForge
+
+Changes:
+1. FreeMiCal.exe is the Windows version, fMiCal the command line version
+2. It allows to set the parameters in a dialog and then fire up the export
+
+Implementation:
+1. FreeMiCal starts fMiCal with command line parameters assembled from the input fields.
+2. fMiCal is started as a child process with hidden windows. I don't know how the Outlook dialog behaves.
+ PLEASE CAN YOU TEST THIS ON VISTA?
+
+Known issues:
+1. If export takes longer, there is no feedback to the graphical front end. I am working on a solution
+2. If you exit the Window, the hidden process terminates
+3. If an error occurs while starting the sub process, the dialog just informs but no further reaction is programmed 
+
+0.1.0.0 - 0.1.0.5
+=================
+20070301 war
+
+Internal versions for testing. Successor of Outlook2iCal
+

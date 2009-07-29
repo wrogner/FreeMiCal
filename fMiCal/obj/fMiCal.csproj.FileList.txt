@@ -1,0 +1,6 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\fMiCal.csproj.ResolveComReference.cache
+..\FreeMiCal\bin\Debug\fMiCal.exe
+..\FreeMiCal\bin\Debug\fMiCal.pdb
+obj\Debug\fMiCal.exe
+obj\Debug\fMiCal.pdb

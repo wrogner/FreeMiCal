@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FreeMiCal.csproj.ResolveComReference.cache
+bin\Debug\FreeMiCal.exe
+bin\Debug\FreeMiCal.pdb
+obj\Debug\FreeMiCal.exe
+obj\Debug\FreeMiCal.pdb
+obj\Debug\FreeMiCal.Form1.resources
+obj\Debug\FreeMiCal.csproj.GenerateResource.Cache
+obj\Debug\FreeMiCal.Properties.Resources.resources
+bin\Debug\fMiCal.exe
+bin\Debug\fMiCal.pdb
+bin\Debug\Microsoft.Office.Interop.Outlook.dll
